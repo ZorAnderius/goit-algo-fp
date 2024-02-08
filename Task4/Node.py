@@ -1,7 +1,7 @@
 import uuid
 
 class Node:
-    def __init__(self, key, color="skyblue"):
+    def __init__(self, key, color="skyblue") -> None:
         self.left = None
         self.right = None
         self.val = key

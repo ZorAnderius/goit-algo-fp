@@ -1,7 +1,9 @@
 import matplotlib.pyplot as plt
 import networkx as nx
 
-def add_edges(graph, node, pos, x=0, y=0, layer=1):
+from Node import Node
+
+def add_edges(graph: nx.DiGraph, node: Node, pos, x=0, y=0, layer=1) -> nx.DiGraph:
     if node is not None:
         graph.add_node(node.id, color=node.color, label=node.val)  # Використання id та збереження значення вузла
         if node.left:
@@ -16,7 +18,7 @@ def add_edges(graph, node, pos, x=0, y=0, layer=1):
             r = add_edges(graph, node.right, pos, x=r, y=y - 1, layer=layer + 1)
     return graph
 
-def draw_heap_tree(tree_root):
+def draw_heap_tree(tree_root: Node):
     tree = nx.DiGraph()
     pos = {tree_root.id: (0, 0)}
     tree = add_edges(tree, tree_root, pos)
