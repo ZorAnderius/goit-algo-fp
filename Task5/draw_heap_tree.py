@@ -10,7 +10,6 @@ def add_edges(graph:nx.DiGraph, node: Node, pos: dict, x=0, y=0, layer=1) -> nx.
             graph.add_edge(node.id, node.left.id)
             l = x - 1 / 2 ** layer
             pos[node.left.id] = (l, y - 1)
-            print(type(pos))
             l = add_edges(graph, node.left, pos, x=l, y=y - 1, layer=layer + 1)
         if node.right:
             graph.add_edge(node.id, node.right.id)
