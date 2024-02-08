@@ -3,7 +3,7 @@ import networkx as nx
 
 from Node import Node
 
-def add_edges(graph: nx.DiGraph, node: Node, pos, x=0, y=0, layer=1) -> nx.DiGraph:
+def add_edges(graph: nx.DiGraph, node: Node, pos: dict, x=0, y=0, layer=1) -> nx.DiGraph:
     if node is not None:
         graph.add_node(node.id, color=node.color, label=node.val)  # Використання id та збереження значення вузла
         if node.left:
