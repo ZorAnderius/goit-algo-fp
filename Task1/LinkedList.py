@@ -1,15 +1,15 @@
 from Node import Node
 
 class LinkedList:
-    def __init__(self):
+    def __init__(self) -> None:
         self.head = None
         
-    def insert_at_beginning(self, data):
+    def insert_at_beginning(self, data: int) -> None:
         node = Node(data)
         node.next = self.head
         self.head = node
     
-    def insert_at_end(self, data):
+    def insert_at_end(self, data: int) -> None:
         node = Node(data)
         if self.head is None:
             self.head = node
@@ -19,7 +19,7 @@ class LinkedList:
                 current = current.next
             current.next = node
     
-    def insert_after(self, prev_node: Node, data):
+    def insert_after(self, prev_node: Node, data: int) -> None:
         if prev_node is None:
             print('Попереднього вузла не існує')
             return 
@@ -27,7 +27,7 @@ class LinkedList:
         new_node.next = prev_node.next
         prev_node.next = new_node
 
-    def insert_before(self, current_node: Node, data):
+    def insert_before(self, current_node: Node, data: int) -> None:
         if current_node is None:
             print('Вузла не існує')
             return 
@@ -50,7 +50,7 @@ class LinkedList:
         new_node.next = prev_node.next
         prev_node.next = new_node
 
-    def delete_node(self, key: int):
+    def delete_node(self, key: int) -> None:
         current = self.head
         if current and current.data == key:
             self.head = current.next
@@ -73,7 +73,7 @@ class LinkedList:
             current = current.next
         return None
 
-    def print_list(self):
+    def print_list(self) -> None:
         current = self.head
         while current:
             print(current.data, end=' ')
@@ -102,7 +102,7 @@ class LinkedList:
             fast = fast.next.next
         return slow
 
-    def __sortedMerge(self, left, right):
+    def __sortedMerge(self, left: Node, right: Node) -> Node:
         result = None
         
         if not left:
@@ -118,7 +118,7 @@ class LinkedList:
             result.next = self.__sortedMerge(left, right.next)
         return result
 
-    def MergeSort(self, node: Node=None):
+    def MergeSort(self, node: Node=None) -> Node:
         if node is None:
             node = self.head
         if node is None or node.next is None:

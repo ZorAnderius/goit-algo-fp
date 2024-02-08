@@ -1,6 +1,7 @@
 from LinkedList import LinkedList
+from Node import Node
 
-def merge_lists(left_list, right_list):
+def merge_lists(left_list: LinkedList | Node, right_list: LinkedList| Node) -> LinkedList | Node:
     left_node = left_list.head if type(left_list) is LinkedList else left_list
     right_node = right_list.head if type(right_list) is LinkedList else right_list
         

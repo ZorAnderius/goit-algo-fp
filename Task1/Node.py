@@ -1,9 +1,9 @@
 class Node:
-    def __init__(self, data=None):
+    def __init__(self, data: int=None) -> None:
         self.data = data
         self.next = None
     
-    def print_nodes(self):
+    def print_nodes(self) -> None:
         if self is None:
             print(' ')
             return
