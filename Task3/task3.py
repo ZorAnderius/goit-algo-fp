@@ -37,15 +37,14 @@ def task3() -> None:
     new_graph = create_graph(graph, is_loaded=True)
     show_graph(new_graph)
     show_shortest_path_way(new_graph)
-    print(sorted(dijkstra(new_graph, 'A').items(),  key=lambda item: item[1]))
     
     shortest_path_lengths = nx.single_source_dijkstra_path_length(new_graph, source='A')
-    print('\n\nПеревірка правильності розрахунку розробленого та бібліотечного алгоритмів Дейкстри \n')
+    print('\nПеревірка правильності розрахунку розробленого та бібліотечного алгоритмів Дейкстри \n')
     
-    print('Розроблений алгоритм Дейкстри:')
+    print('\nРозроблений алгоритм Дейкстри:')
     print(sorted(dijkstra(new_graph, 'A').items(),  key=lambda item: item[1]))
     
-    print('Бібліотечний алгоритм Дейкстри:')
+    print('\nБібліотечний алгоритм Дейкстри:')
     print(shortest_path_lengths) 
 
 

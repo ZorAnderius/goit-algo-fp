@@ -22,7 +22,7 @@ def task7() -> None:
     probabilities = {key: count / nums for key, count in counts.items()}
     
     console.print(draw_table(probabilities, 'Probabilities table'))
-
+    
     plt.bar(probabilities.keys(), probabilities.values())
     plt.show()
 
