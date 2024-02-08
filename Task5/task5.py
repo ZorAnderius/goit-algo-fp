@@ -6,7 +6,7 @@ from build_heap_tree import build_heap_tree
 from bfs import bfs_recursive
 from dfs import dfs_recursive
 
-def task5():
+def task5() -> None:
     array = [7, 11, -1, 4, 3, 9, 18, 0, 100, 5,-10]
     heapq.heapify(array)
 

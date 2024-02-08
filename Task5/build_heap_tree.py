@@ -1,6 +1,6 @@
 from Node import Node
 
-def build_heap_tree(data):
+def build_heap_tree(data: list) -> Node:
     heap = []
     for value in data:
         heap.append(Node(value))
