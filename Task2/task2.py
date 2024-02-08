@@ -1,5 +1,4 @@
 import turtle
-import math
 
 def draw_pythagoras_tree(t, order, size):
     if order == 0:
@@ -32,7 +31,7 @@ def pythagoras_tree(order, size):
     
     window.mainloop()
 
-def task2():
+def task2() -> None:
     while True:
         try:
             input_arg = int(input('Enter the level of recursion: (close to -1)):   ' ))
